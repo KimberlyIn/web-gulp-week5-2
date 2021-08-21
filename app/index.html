@@ -5,131 +5,169 @@ engine: ejs
 current: index
 ---
 
-<main class="mainx">
-  <div class="header">
-    <ul class="list-unstyled">
-      <li>
-        <h3>Assignment</h3>
-      </li>
-      <li>
-        <div class="dropdown">
-          <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            All Courses
-            <i class="material-icons">expand_more</i>
-          </a>
-        
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </div>
-      </li>
-      <li>
-        <i class="material-icons">search</i>
-      </li>
-      <li>
-        <i class="material-icons">notifications_active</i>
-      </li>
-    </ul>
-  </div>
-  <div class="row">
-    <div class="col-4">
-      <p>
-        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-          All (4)
-          <i class="material-icons">expand_more</i>
+<main class="main vh-100 flex-grow-1 overflow-scroll p-4">
+  <div class="header d-flex justify-content-between">
+    <div class="list-unstyled d-flex">
+      <h3>Assignment</h3>
+      <div class="dropdown my-2">
+        <a class="dropdown-toggle mx-3 fs-6" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          All Courses
         </a>
-      </p>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex in-Mx-4"> 
+      <a href="#">
+        <i class="material-icons">search</i>
+      </a>
+      <a href="#">
+        <i class="material-icons">notifications_active</i>
+      </a>
+    </div>
+  </div>
+  <div class="row py-5">
+    <p class="mb-3">
+      <a class="p-0 " data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+        All (4)
+        <i class="material-icons">expand_more</i>
+      </a>
+    </p>
+    <div class="col-4">
       <div class="collapse" id="collapseExample">
-        <div class="card card-body">
-          <ul>
-            <li>
-              <p>Chapter Assignment 2</p>
-              <p>4 hrs ago</p>
-              <h6>Please check this file…</h6>
-              <p>Emily Wang</p>
+        <ul class="list-group">
+          <li class="list-group-item active" aria-current="true">
+            <div class="d-flex justify-content-between">
+              <small>Chapter Assignment 2</small>
+              <small>4hrs ago</small>
+            </div>
+            <div class="d-flex justify-content-between">
+              <h6 class="fw-bold mb-0">Please check this file…</h6>
+              <small class="text-muted">Emily Wang</small>
+            </div>
+          </li>
+          <li class="list-group-item" aria-current="true">
+            <div class="d-flex justify-content-between">
+              <small>Chapter Assignment 1</small>
+              <small>4hrs ago</small>
+            </div>
+            <div class="d-flex justify-content-between">
+              <h6 class="fw-bold mb-0">My Homework</h6>
+              <small class="text-muted">David Xu</small>
+            </div>
+          </li>
+          <li class="list-group-item" aria-current="true">
+            <div class="d-flex justify-content-between">
+              <small>Final Assignment</small>
+              <small>4hrs ago</small>
+            </div>
+            <div class="d-flex justify-content-between">
+              <h6 class="fw-bold mb-0">Have a problem with this…</h6>
+              <small class="text-muted">Tony Wei</small>
+            </div>
+          </li>
+          <li class="list-group-item" aria-current="true">
+            <div class="d-flex justify-content-between">
+              <small>Final Assignment</small>
+              <small>4hrs ago</small>
+            </div>
+            <div class="d-flex justify-content-between">
+              <h6 class="fw-bold mb-0">Did I do it right?</h6>
+              <small class="text-muted">Christina Lin</small>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-8 comments p-0" comment-tag="2 comments">
+      <div class="container list-group-item p-0">
+        <div class="col-8-top d-flex justify-content-between align-items-center bg-light p-3 border-bottom">      
+          <div>
+            <small class="text-black-50">Chapter Assignment 2 / HTML&CSS</small>
+            <h6>Please check this file for me, thanks!</h6>
+          </div>
+          <i class="material-icons">more_vert</i>
+        </div>
+        <div class="col-8-main p-4">
+          <ul class="list-unstyled d-flex flex-column">
+            <li class="d-flex">
+              <div class="avatar clearfix">
+                <div class="img-box float-start me-3">
+                  <img src="https://images.unsplash.com/photo-1514794749374-fb67509dbb7f?ixlib=rb-1.2.1&ixid=eyjhchbfawqiojeymdd9&auto=format&fit=crop&w=2000&q=80" alt="人物頭像">
+                </div>
+              </div>
+              <div class="text-box">
+                <h6 class="nane m-0">Emily Wang</h6>
+                <p class="email mb-2 text-black-50">10:38 AM (4 hours ago)</p>
+                <div class="col-8-text mb-2">
+                  <p class="m-0">
+                    Hi Teacher, the attached file is my homework of chapter 2. And here comes a question: Why in the following code the height of the <a class="text-success" href="#">div</a> is bigger than the height of the <a class="text-success" href="#">img </a> ? There is a gap below the image, but it doesn’t seems to be a padding/margin. 
+                  </p>
+                  <span>
+                    What is the gap or extra space below image?
+                  </span>
+                </div>
+                <button type="button" class="p-2 border-1 border-secondary fw-bold">
+                  <i class="material-icons">attach_file</i>
+                  HW-2-David.zip
+                </button>
+              </div>
             </li>
-            <li>
-              <p>Chapter Assignment 2</p>
-              <p>4 hrs ago</p>
-              <h6>Please check this file…</h6>
-              <p>Emily Wang</p>
-            </li>
-            <li>
-              <p>Chapter Assignment 2</p>
-              <p>4 hrs ago</p>
-              <h6>Please check this file…</h6>
-              <p>Emily Wang</p>
-            </li>
-            <li>
-              <p>Chapter Assignment 2</p>
-              <p>4 hrs ago</p>
-              <h6>Please check this file…</h6>
-              <p>Emily Wang</p>
+            <hr>
+            <li class="d-flex">
+                <div class="avatar clearfix">
+                  <div class="img-box float-start me-3">
+                    <img src="https://images.unsplash.com/photo-1514794749374-fb67509dbb7f?ixlib=rb-1.2.1&ixid=eyjhchbfawqiojeymdd9&auto=format&fit=crop&w=2000&q=80" alt="人物頭像">
+                  </div>
+                </div>
+                <div class="d-flex flex-column justify-content-between">
+                  <div class="d-flex flex-row justify-content-between mb-2">
+                    <div class="text-box">
+                      <h6 class="nane m-0">Andy Chen (You)</h6>
+                      <p class="email m-0 text-black-50">13:24 AM (1 hours ago)</p>
+                    </div>
+                    <div class="col-8-icon icon">
+                      <a href="#">
+                        <i class="material-icons">star_rate</i>
+                      </a>
+                      <a href="#">
+                        <i class="material-icons">create</i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-8-text">
+                    <p>
+                      Hi David, by default, an image is rendered inline, like a letter so it sits on the same line that a, b, c and d sit on. There is space below that line for the descenders you find on letters like g, j, p and q. 
+                      <br>
+                      <br>
+                      You can:
+                      <br>
+                    </p>
+                    <ul type=disc>
+                      <li>
+                        adjust the <a class="text-success" href="#">vertical-align</a> of the image to position it elsewhere (e.g. the <a class="text-success" href="#">middle</a> ) or
+                      </li>
+                      <li>
+                        change the <a class="text-success" href="#">display</a> so it isn’t inline.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
             </li>
           </ul>
         </div>
       </div>
-    </div>
-    <div class="col-8">
-      <p>2 comments</p>
-      <div class="col-8-top">
-        <p>Chapter Assignment 2 / HTML&CSS</p>
-        <h6>Please check this file for me, thanks!</h6>
-        <i class="material-icons">more_vert</i>
-      </div>
-      <div class="col-8-main">
-        <ul>
-          <li>
-            <div class="img-box">0</div>
-            <h6 class="nane">Emily Wang</h6>
-            <p class="email">10:38 AM (4 hours ago)</p>
-            <div class="col-8-text">
-              <p>
-                Hi Teacher, the attached file is my homework of chapter 2. And here comes a question: Why in the following code the height of the <a href="#">div</a> is bigger than the height of the <a href="#">img</a> ? There is a gap below the image, but it doesn’t seems to be a padding/margin. 
-              </p>
-              <span>
-                What is the gap or extra space below image?
-              </span>
-            </div>
-            <button>
-              <i class="material-icons">attach_file</i>
-              HW-2-David.zip
-            </button>
-          </li>
-          <hr>
-          <li>
-            <div class="img-box">0</div>
-            <h6 class="nane">Andy Chen (You)</h6>
-            <p class="email">13:24 AM (1 hours ago)</p>
-            <div class="col-8-icon icon">
-              <i class="material-icons">star_rate</i>
-              <i class="material-icons">create</i>
-            </div>
-            <div class="col-8-text">
-              <p>
-                Hi David, by default, an image is rendered inline, like a letter so it sits on the same line that a, b, c and d sit on. There is space below that line for the descenders you find on letters like g, j, p and q. 
-                <br>
-                You can:
-                <br>
-              </p>
-              <ul>
-                <li>
-                  adjust the <a href="#">vertical-align</a> of the image to position it elsewhere (e.g. the <a href="#">middle</a> ) or
-                </li>
-                <li>
-                  change the <a href="#">display</a> so it isn’t inline.
-                </li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-        <div class="col-8-bottom">
-          <a href="#"><i class="material-icons">chevron_left</i></a>
+      <div class="col-8-bottom d-flex justify-content-between mt-4">
+        <div>
+          <a class="" href="#"><i class="material-icons">chevron_left</i></a>
           <a href="#"><i class="material-icons">chevron_right</i></a>
-          <a href="#">Mark as read</a>
-          <a href="#">Reply</a>
+        </div>
+        <div>
+          <button type="button" class="btn me-4 btn-outline-success">Mark as read</button>
+          <button type="button" class="btn btn-success">Reply</button>
         </div>
       </div>
     </div>
